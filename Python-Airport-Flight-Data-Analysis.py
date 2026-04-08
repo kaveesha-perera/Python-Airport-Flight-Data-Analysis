@@ -1,32 +1,19 @@
-"""
-****************************************************************************
-Additional info
- 1. I declare that my work contins no examples of misconduct, such as
- plagiarism, or collusion.
- 2. Any code taken from other sources is referenced within my code solution.
- 3. Student ID: UOW user name- w2182464 / IIT ID- 20250778 
- 4. Date: 2025 - 11 - 24
-****************************************************************************
 
-"""
 from graphics import *
 import csv
 import math
 
 # global variable
-data_list = []   # data_list An empty list to load and hold data from csv file
-Rain_Hours = []  # Rain_Hours an empty list for load and hold rains hours from csv file
-min_airports = [] # store airports with min flights count
+data_list = []   
+Rain_Hours = []  
+min_airports = [] 
 Valid_city_code =["LHR","MAD","CDG","IST","AMS","LIS","FRA","FCO","MUC","BCN"] #All airport codes used in the survey from CW Taable 2
 Airport_name = {"LHR":"London Heathrow", "MAD":"Madrid Adolfo Suárez-Barajas","CDG":"Charles De Gaulle International", "IST":"Istanbul Airport International",
                     "AMS":"Amsterdam Schiphol", "LIS":"Lisbon Portela", "FRA":"Frankfurt Main","FCO":"Rome Fiumicino", "MUC":"Munich International",
                     "BCN":"Barcelona International"} #airport codes' full names
 
 def load_csv(CSV_chosen):
-    """
-    This function loads any csv file by name (set by the variable 'selected_data_file') into the list "data_list"
-    YOU DO NOT NEED TO CHANGE THIS BLOCK OF CODE
-    """
+   
     with open(CSV_chosen, 'r') as file:
         csvreader = csv.reader(file)
         header = next(csvreader) # skip header row
